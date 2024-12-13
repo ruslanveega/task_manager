@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: task_manager
+  datasource:
+    url: jdbc:postgresql://localhost:5432/task_manager
+    username: postgres
+    password: strelka
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  docker:
+    compose:
+      enabled: false
+
+logging:
+  level:
+    org.springframework: INFO
+    com.ruslan.springboot.task_manager: DEBUG
